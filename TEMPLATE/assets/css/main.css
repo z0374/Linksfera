@@ -1,0 +1,50 @@
+main ul, main {
+    width: 100%;
+}
+main{
+    min-height: 69vh;
+}
+
+main ul, .waranasSearchItems {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+    overflow: auto;
+}
+
+main .mainItem, .waranasSearchItems li {
+  width: 90%;
+  height: 9rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+main .mainItem h1, .waranasSearchItems h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--colorMainSDark);
+  text-align: center;
+}
+
+main .mainItem h2, .waranasSearchItems h2 {
+  font-size: 0.9em;
+  color: var(--colorMainDDark);
+  margin: 0 4.2vw;
+  text-align: center;
+}
+
+main .mainItem a, .waranasSearchItems a {
+  color: var(--colorMainS);
+  text-decoration: underline;
+  font-size: 1.5em;
+  margin: 3vh 0;
+  text-align: center;
+}
+
+main .icon {
+    font-size: 0.39em;
+}
