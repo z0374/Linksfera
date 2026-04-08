@@ -1,7 +1,0 @@
-[submodule "assets/js/bot/engine"]
-	path = assets/js/bot/engine
-	url = https://github.com/z0374/BOT-Engine-workerCF.git
-	branch = develop
-[submodule "assets/js/bot/comands/linksfera"]
-	path = assets/js/bot/comands/linksfera
-	url = https://github.com/z0374/BOT-Linksfera-Comands.git

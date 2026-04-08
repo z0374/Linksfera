@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Victor Macedo</title>
+    <link rel='icon' type='image/svg+xml' href='/images/faviconLinksfera2026020632.svg'>
+    <style>
+    :root {
+            --colorMainP: #a3a3a3;
+            --colorMainS: #E0E0E0;
+            --colorMainSDark: #FFFFFF;
+            --colorMainDDark: #303030;
+            --colorFooterPL: #B0B0B0;
+            --colorFooterP: #0A0A0A;
+            --colorFooterD: rgba(255, 255, 255, 0.05);
+        }
+        
+        *{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    display: auto;
+    opacity:1;
+
+}
+button:hover, label:hover, a:hover{
+    cursor: pointer;
+    opacity:0.6;
+    
+}html{
+    height: 100%;
+    display:flex;
+    align-items: stretch;
+    justify-content: center;
+    background-color: #ffffff;
+}body {
+    min-height: 100vh;
+    height: fit-content;
+    background-color: var(--colorMainP);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}header {
+    height:fit-content;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    border-bottom:solid 0.3vh #ffffff;
+    background-color:rgba(240, 240, 240, 0.6);
+    padding-bottom:1.5%;
+}
+
+header #logo {
+    width:90%;
+    height:50%;
+    flex-grow: 1;
+    font-size: 9rem;
+}#logo{
+    display: flex;
+    justify-content: center;
+    filter:drop-shadow(0px 0px 3px #000000);
+}
+ #logo:hover{opacity:1;}#search {
+    min-width: 44px;
+    min-height: 45px;
+    position: relative;
+    border: solid 0.06vh black;
+    border-radius: 0.9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 1;
+    background-color: white;
+    z-index: 6;
+    overflow: hidden;
+}
+#search input {
+    width: 60%;
+    height: 100%;
+    font-size: 100%;
+    border-radius: 0.9vh;
+    padding-left: 3%;
+    outline: none;
+    z-index: 3;
+}
+#search button {
+    min-width: 44px;
+    width: 30%;
+    min-height: 44px;
+    height: 100%;
+    border-radius: 0.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3;
+    color: #363636;
+}
+#search a {
+    min-width: 44px;
+    width: 39%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    flex-grow: 1;
+}
+#search a:hover {
+    background: rgba(90, 90, 90, 0.09);
+}
+.waranasSearchItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.waranasSearchItemsReturn{
+    width: 100%;
+    min-height: 45px;
+    margin-top: auto;
+    font-size: 100%;
+    font-weight: bolder;
+    background-color: rgba(90, 90, 90, 0.18);
+}
+
+.waranasSearchItemsReturn:hover{
+    background-color: rgba(90, 90, 90, 0.6);
+}
+
+#search svg {
+    width: 45%;
+    height: 51%;
+}main ul, main {
+    width: 100%;
+}
+main{
+    min-height: 45vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main ul, .waranasSearchItems {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+    overflow: auto;
+}
+
+main .mainItem, .waranasSearchItems li {
+  width: 90%;
+  height: 7.2rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+main .mainItem h1, .waranasSearchItems h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--colorMainSDark);
+  text-align: center;
+}
+
+main .mainItem h2, .waranasSearchItems h2 {
+  font-size: 0.9em;
+  color: var(--colorMainDDark);
+  margin: 0 4.2vw;
+  font-style: italic;
+  text-align: center;
+}
+
+main .mainItem a, .waranasSearchItems a {
+  color: var(--colorMainS);
+  text-decoration: underline;
+  font-size: 1.5em;
+  margin: 3vh 0;
+  text-align: center;
+}
+
+main .icon {
+    font-size: 0.39em;
+}
+footer {
+    width: 100%;
+    min-height: 15vh;
+    background-color: rgba(15, 15, 15, 0.6);
+    text-align: center;
+    padding: 6% 0;
+}
+
+footer,
+footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+}
+
+footer ul {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+footer li {
+    width:100%;
+    height: 24%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--colorFooterPL);
+    margin: 0.21em 0;
+}
+
+footer #i01, footer #i02{
+    justify-content: end;
+}
+
+footer #i02 a{
+    font-size: 0.72em;
+    color: var(--colorFooterPL);
+}
+
+footer a{
+    flex-flow: row nowrap;
+    color: var(--colorFooterPL);
+    margin:0 0.72rem;
+}
+
+footer #i03{
+    width: 100%;
+    height: 30%;
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    flex-flow: row nowrap;
+    font-size: 0.72em;
+    white-space: nowrap;
+    color: var(--colorFooterPL);
+}
+
+.envelopeSVG{
+    margin: 0 0.6%;
+}
+footer #i01 h2{
+    font-size: 0.99rem;
+    color:var(--colorFooterP);
+}
+        
+        *{overflow: visible;}
+    #search{width: calc(21% + 18%);height:calc(21% + 3%);}
+
+        /* ============================================================
+           I. INTERMEDIÁRIO MOBILE (XS + SM) - Até 767px
+           ============================================================ */
+        @media screen and (max-width: 767px) {
+            @media (orientation: portrait)  { body{
+    width: 100vw;
+} }
+            @media (orientation: landscape) {  }
+
+            /* Específicos */
+            @media screen and (max-width: 575px) {
+                @media (orientation: portrait)  {  }
+                @media (orientation: landscape) {  }
+            }
+            @media screen and (min-width: 576px) {
+                @media (orientation: portrait)  {  }
+                @media (orientation: landscape) {  }
+            }
+        }
+
+        /* ============================================================
+           II. INTERMEDIÁRIO TABLET (MD + LG) - 768px até 1199px
+           ============================================================ */
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            @media (orientation: portrait)  {  }
+            @media (orientation: landscape) {  }
+
+            /* Específicos */
+            @media screen and (max-width: 991px) {
+                @media (orientation: portrait)  {  }
+                @media (orientation: landscape) { body{
+    width: 100vw;
+} }
+            }
+            @media screen and (min-width: 992px) {
+                @media (orientation: portrait)  {  }
+                @media (orientation: landscape) {  }
+            }
+        }
+
+        /* ============================================================
+           III. INTERMEDIÁRIO DESKTOP (XL + 2XL) - A partir de 1200px
+           ============================================================ */
+        @media screen and (min-width: 1200px) {
+            @media (orientation: portrait)  {  }
+            @media (orientation: landscape) { body{
+    width: 30vw;
+} }
+
+            /* Específicos */
+            @media screen and (max-width: 1399px) {
+                @media (orientation: portrait)  {  }
+                @media (orientation: landscape) {  }
+            }
+            @media screen and (min-width: 1400px) {
+                @media (orientation: portrait)  {  }
+                @media (orientation: landscape) {  }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="lupa" viewBox="0 0 100 100">
+            <g xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" stroke-width="12"
+                stroke-linecap="round">
+                <circle cx="42" cy="42" r="28" />
+                <line x1="64" y1="64" x2="85" y2="85" />
+            </g>
+        </symbol>
+        <symbol id="e-mail" viewBox="0 0 3000 3000">
+            <rect xmlns="http://www.w3.org/2000/svg" x="150" y="750" rx="15" ry="15"
+                style="width: 2700px !important; height:1500px !important; fill: none; stroke: currentColor; stroke-width: 300;" />
+            <path xmlns="http://www.w3.org/2000/svg"
+                d=" M 150 750 L 2850 750 L 2850 900         L 1580 1500 C 1580 1500 1500 1555 1420 1500         L 1420 1500 L 150 900 Z"
+                style="fill: none; stroke: currentColor; stroke-width: 300; stroke-linejoin: round;" />
+        </symbol>
+        <symbol id="whatsapp" viewBox="0 0 32 32">
+            <path xmlns="http://www.w3.org/2000/svg"
+                d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"
+                style="stroke:currentColor;fill:currentColor;" />
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 382 382">
+            <path xmlns="http://www.w3.org/2000/svg" style="fill:currentColor;"
+                d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889   C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056   H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806   c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1   s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73   c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079   c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426   c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472   L341.91,330.654L341.91,330.654 Z" />
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 3000 3000">
+            <path xmlns="http://www.w3.org/2000/svg" id="arrow" style="fill:currentColor;stroke:none;"
+                d="M 150 1900 C -100 2100 50 2500 450 2300 L 1950 1300 L 2250 1700 C 2550 2100 2550 2100 2550 1500 L 2550 900 C 2550 600 2550 600 2250 500 L 1650 300 C 1100 150 1100 150 1350 500 L 1650 900 Z" />
+        </symbol>
+        <symbol id="svgLogo" viewBox="570 720 1839 1500">
+            <defs xmlns="http://www.w3.org/2000/svg">
+                <filter id="sombraTexto" x="-50%" y="-50%" width="200%" height="200%">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="formaGorda" />
+                    <feGaussianBlur in="formaGorda" stdDeviation="30" result="borraoGordo" />
+                    <feOffset in="borraoGordo" dx="0" dy="0" result="sombraFinal" />
+                    <feMerge>
+                        <feMergeNode in="sombraFinal" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+            <path xmlns="http://www.w3.org/2000/svg" id="heart-bg"
+                d="M 1000 1500 Q 1200 1700 1500 1800 Q 1800 1700 2000 1500 C 2300 1100 1800 800 1500 1100 C 1200 800 700 1100 1000 1500"
+                filter="url(#sombraTexto)" fill="white" stroke="none" />
+            <path xmlns="http://www.w3.org/2000/svg" id="sword"
+                d="M 1150 1600 L 1150 1800 L 1350 1800 L 2100 1100 L 1900 900" stroke-width="3" stroke="none"
+                filter="url(#sombraTexto)" fill="gray" />
+            <path xmlns="http://www.w3.org/2000/svg"
+                d="M 1200 1750 L 2000 1000 M 2100 1300 L 1700 900 L 1800 800 L 1950 950 L 2100 800 L 2200 900 L 2050 1050 L 2200 1200 L 2100 1300"
+                paint-order="stroke" stroke-width="3" stroke="black" filter="url(#sombraTexto)" fill="yellow" />
+            <path xmlns="http://www.w3.org/2000/svg" id="cross"
+                d="M 1950 1600 L 1800 1800 L 1050 1300 L 900 1500 L 750 1400 L 900 1200 L 750 1100 L 900 900 L 1050 1000 L 1200 800 L 1350 900 L 1200 1100 L 1950 1600"
+                stroke="black" filter="url(#sombraTexto)" fill="#583E39" />
+            <path xmlns="http://www.w3.org/2000/svg" id="heart"
+                d="M 1000 1500 Q 1200 1700 1500 1800 Q 1800 1700 2000 1500 C 2300 1100 1800 800 1500 1100 C 1200 800 700 1100 1000 1500"
+                fill="red" stroke="black" />
+            <text xmlns="http://www.w3.org/2000/svg" x="1500" y="500"
+                style="font-family: Arial !important;                 font-size: 135px !important;                 font-weight: bold !important;                 text-anchor: middle !important;                 fill: #cadce5 !important;                 stroke: black !important;                stroke-width: 1.2px !important;                paint-order: stroke !important;                 /*filter: url(#sombraTexto) !important; */                transform: scale(1, 3) !important;                 letter-spacing: 15px !important;">VICTORMACEDO.dev.br</text>
+        </symbol>
+    </svg>
+    <header><a href="./" id="logo" title="victor.macedo2001" alt="victormacedo.dev.br" loading="lazy">
+            <svg class="icon logo" style="width: 1em !important; height:1em !important;">
+                <use href="#svgLogo"></use>
+            </svg></a>
+        <span id='search'><input aria-label="barra de pesquisa" id="busca" placeholder="Pesquise..." type="text"><a
+                aria-label='resetar pesquisa' href='?'></a><button aria-label='Buscar' id='busque'
+                onclick='pesquisar(data, `text`, `main`)'><svg class='icon lupaSVG'
+                    style='width: 1em !important; height:1em !important;'>
+                    <use href='#lupa'></use>
+                </svg></button></span>
+    </header>
+    <main>
+        <ul></ul>
+    </main>
+    <footer>
+        <ul>
+            <li id="i01">
+                <h2 id="titulo">Desenvolvido por:</h2>
+            </li>
+            <li id="i02">
+                <a id="link1" href="https://www.linkedin.com/in/victor-macedo" target="_blank">
+                    <svg class='icon svglinkedin' style='width: 1em !important; height:1em !important;'>
+                        <use href='#linkedin'></use>
+                    </svg>
+                    victor-macedo
+                </a>
+            </li>
+            <li id="i03">
+                <a id="link2" href="mailto:victormacedo2001@hotmail.com" target="_blank">
+                    <svg class='icon svge-mail' style='width: 1em !important; height:1em !important;'>
+                        <use href='#e-mail'></use>
+                    </svg>
+                    victormacedo2001@hotmail.com
+                </a> | <a id="link3"
+                    href="https://wa.me/5562994805555?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20websites"
+                    target="_blank">
+                    <svg class='icon svgwhatsapp' style='width: 1em !important; height:1em !important;'>
+                        <use href='#whatsapp'></use>
+                    </svg>
+                    (62) 9 9480-5555
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script>/**
+* Adiciona um listener ao carregar a página para aplicar imagens de fundo
+* a elementos com a classe '.img' e o atributo 'data-bg'.
+* Este script é carregado em todas as páginas.
+*/
+        window.addEventListener('DOMContentLoaded', () => {
+            const backgrounds = document.querySelectorAll('.img');
+            backgrounds.forEach(el => {
+                const bgImage = el.dataset.bg;
+                if (bgImage) {
+                    el.style.backgroundImage = bgImage;
+                    el.style.backgroundColor = 'rgba(255,255,255,0)';
+                }
+            });
+        }); function pesquisar(data, tipo, htmlResult) {
+            const input = document.getElementById("busca").value.toLowerCase().trim();
+            const result = document.createElement("ul");
+            const htmlRes = document.querySelector(htmlResult);
+            result.className = "waranasSearchItems";
+            htmlRes.innerHTML = "";
+
+            if (!input) return;
+
+            const searchTerms = input.split(",").map(t => t.trim()).filter(t => t);
+
+            // Função de pontuação fuzzy com proteção contra campos nulos/undefined
+            function scoreField(field, term) {
+                if (!field) return 0; // Se o campo for undefined ou null, ignora a pontuação
+
+                const fieldStr = String(field).toLowerCase();
+                if (fieldStr === term) return 5;
+                if (fieldStr.includes(term)) return 3;
+
+                let common = 0;
+                for (let i = 0; i < Math.min(fieldStr.length, term.length); i++) {
+                    if (fieldStr[i] === term[i]) common++;
+                }
+                return common / term.length;
+            }
+
+            // Calcula relevância total do item
+            function relevancia(item) {
+                let score = 0;
+                searchTerms.forEach(term => {
+                    // Proteção com fallback para string vazia ""
+                    score += scoreField(item.titulo || "", term) * 5;
+                    score += scoreField(item.legenda || "", term) * 3;
+                    // Suporte para chaves 'texto' ou 'text' conforme seu dump
+                    score += scoreField(item.texto || item.text || "", term) * 2;
+
+                    const tags = String(item.tags || "");
+                    if (tags) {
+                        const tagsArray = tags.toLowerCase().split(",").map(t => t.trim());
+                        tagsArray.forEach(tag => {
+                            score += scoreField(tag, term);
+                        });
+                    }
+                });
+                return score;
+            }
+
+            // Ordena os itens por relevância
+            const filtered = data
+                .map(item => ({ ...item, score: relevancia(item) }))
+                .filter(item => item.score > 0)
+                .sort((a, b) => b.score - a.score);
+
+            if (filtered.length === 0) {
+                result.style.padding = "30% 0";
+                result.innerHTML = `<li class="waranasSearchItems"><h1>ELEMENTO LEXICAL INESISTENTE!</h1></li>`;
+                htmlRes.append(result); // Garante que a mensagem apareça
+                return;
+            }
+
+            // Função para destacar termos encontrados
+            function highlight(text) {
+                if (!text) return "";
+                let highlighted = String(text);
+                searchTerms.forEach(term => {
+                    const regex = new RegExp(`(${term})`, "gi");
+                    highlighted = highlighted.replace(regex, "<mark>$1</mark>");
+                });
+                return highlighted;
+            }
+
+            // Exibe resultados
+            filtered.forEach(item => {
+                if (tipo === "text") {
+                    const li = document.createElement("li");
+
+                    const h1 = document.createElement("h1");
+                    h1.innerHTML = highlight(item.titulo);
+
+                    const h2 = document.createElement("h2");
+                    h2.innerHTML = `(${highlight(item.legenda)})`;
+
+                    const a = document.createElement("a");
+                    // Mapeia para item.texto ou item.text para o conteúdo do link
+                    a.innerHTML = highlight(item.texto || item.text || "");
+                    a.innerHTML += " <svg class='icon arrowClick' style='width: 1em !important; height:1em !important;'><use href='#arrow'></use></svg>";
+
+                    // Mapeia para item.url ou item.anc para o endereço
+                    a.href = item.url || item.anc || "#";
+
+                    li.append(h1, h2, a);
+                    result.appendChild(li);
+                } else if (tipo === "custom") {
+                    result.appendChild(document.createTextNode(item.titulo || ""));
+                }
+            });
+
+            // Botão voltar
+            const btReturn = document.createElement("button");
+            btReturn.className = "waranasSearchItemsReturn";
+            btReturn.textContent = "Voltar";
+            btReturn.onclick = () => location.reload();
+            result.appendChild(btReturn);
+
+            htmlRes.append(result);
+        } document.addEventListener("DOMContentLoaded", () => {
+            renderizarLinks(data);
+        });
+
+        function renderizarLinks(links) {
+            const mainContainer = document.querySelector("main ul");
+            if (!mainContainer) return;
+
+            mainContainer.innerHTML = "";
+
+            // 1. Filtros
+            const pins = links.filter(item => item.visible === 'pin');
+            let shows = links.filter(item => item.visible === 'show');
+
+            // Sorteio: Embaralha os links de "show" aleatoriamente
+            shows = shows.sort(() => Math.random() - 0.5);
+
+            // Une os pins (que são fixos no topo) com os shows sorteados
+            // e corta para exibir apenas os 3 primeiros no total
+            const linksParaExibir = [...pins, ...shows].slice(0, 3);
+
+            // 2. Gerar o HTML dinamicamente
+            linksParaExibir.forEach(item => {
+                const li = document.createElement("li");
+                li.className = "mainItem";
+
+                if (item.visible === 'pin') li.classList.add('pinned');
+
+                li.innerHTML = `
+            <h1>${item.titulo || ""}</h1>
+            <h2>${item.legenda || ""}</h2>
+            <a href="${item.url || item.anc || "#"}" target="_blank">
+                ${item.texto || item.text || "Visitar"}
+                <svg class="icon arrowClick" style="width: 1em; height: 1em;">
+                    <use href="#arrow"></use>
+                </svg>
+            </a>
+        `;
+
+                mainContainer.appendChild(li);
+            });
+        } const data = [
+    {
+        "titulo": "Google Search",
+        "legenda": "O maior motor de busca do mundo",
+        "texto": "google.com",
+        "url": "https://www.google.com",
+        "tags": "busca, pesquisa, tecnologia, web",
+        "visible": "hidden"
+    },
+    {
+        "titulo": "GitHub Profile",
+        "legenda": "Hospedagem de código-fonte e projetos",
+        "texto": "github.com",
+        "url": "https://github.com",
+        "tags": "programação, dev, git, open source",
+        "visible": "show"
+    },
+    {
+        "titulo": "YouTube - Playlists",
+        "legenda": "Vídeos, tutoriais e entretenimento",
+        "texto": "youtube.com",
+        "url": "https://www.youtube.com",
+        "tags": "video, streaming, música, tutorial",
+        "visible": "show"
+    },
+    {
+        "titulo": "Instagram Oficial",
+        "legenda": "Fotos, Stories e Reels",
+        "texto": "@usuario_exemplo",
+        "url": "https://www.instagram.com",
+        "tags": "social, fotos, rede social, mobile",
+        "visible": "show"
+    },
+    {
+        "titulo": "ChatGPT AI",
+        "legenda": "Inteligência Artificial Generativa",
+        "texto": "chatgpt.com",
+        "url": "https://chatgpt.com",
+        "tags": "ai, ia, chatbot, automação",
+        "visible": "show"
+    },
+    {
+        "titulo": "Wikipedia Free",
+        "legenda": "A enciclopédia livre e colaborativa",
+        "texto": "wikipedia.org",
+        "url": "https://www.wikipedia.org",
+        "tags": "educação, conhecimento, história, ciência",
+        "visible": "show"
+    },
+    {
+        "titulo": "LinkedIn Profissional",
+        "legenda": "Rede social para networking e carreiras",
+        "texto": "linkedin.com/in/perfil",
+        "url": "https://www.linkedin.com",
+        "tags": "trabalho, emprego, networking, business",
+        "visible": "show"
+    },
+    {
+        "titulo": "Behance Portfólio",
+        "legenda": "Vitrine para designers e criativos",
+        "texto": "behance.net",
+        "url": "https://www.behance.net",
+        "tags": "design, arte, criatividade, portfólio",
+        "visible": "show"
+    },
+    {
+        "titulo": "Spotify Music",
+        "legenda": "Milhares de músicas e podcasts",
+        "texto": "spotify.com",
+        "url": "https://www.spotify.com",
+        "tags": "música, áudio, podcast, lazer",
+        "visible": "show"
+    },
+    {
+        "titulo": "Medium Articles",
+        "legenda": "Plataforma para leitura de artigos",
+        "texto": "medium.com",
+        "url": "https://medium.com",
+        "tags": "leitura, escrita, blog, artigos",
+        "visible": "show"
+    },
+    {
+        "titulo": "Dribbble Design",
+        "legenda": "Inspiração visual para interfaces",
+        "texto": "dribbble.com",
+        "url": "https://dribbble.com",
+        "tags": "ui, ux, design, inspiração",
+        "visible": "show"
+    },
+    {
+        "titulo": "Reddit Community",
+        "legenda": "Mergulhe em qualquer tópico",
+        "texto": "reddit.com",
+        "url": "https://www.reddit.com",
+        "tags": "fórum, discussão, comunidade, internet",
+        "visible": "show"
+    }
+];
+
+</script>
+</body>
+
+</html>

@@ -1,8 +1,0 @@
-body {
-    width: 30vw;
-    height: 100vh;
-    background-color: var(--colorMainP);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
